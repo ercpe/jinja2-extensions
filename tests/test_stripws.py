@@ -1,7 +1,7 @@
 from jinja2 import Environment
 
 
-class TestAutoIndentExtension(object):
+class TestStripWsExtension(object):
     
     def _render(self, template_string, **vars):
         env = Environment(extensions=['j2exts.stripws'])
