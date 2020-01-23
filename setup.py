@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='ercpe-j2-exts',
+    name='j2exts',
     version='0.1',
     description='Random collection of Jinja2 extensions',
     author='Johann Schmitz',
