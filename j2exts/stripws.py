@@ -34,4 +34,4 @@ class StripWsExtension(Extension):
         if block_content is None:
             return block_content
 
-        return re.sub(r'(?:\n\s*\n(\s*)\n)+', '\n\n\1', block_content, flags=re.MULTILINE | re.UNICODE | re.IGNORECASE)
+        return re.sub(r'(?:\n\s*\n(\s*)\n)+', '\n\n', block_content, flags=re.MULTILINE | re.UNICODE | re.IGNORECASE)
