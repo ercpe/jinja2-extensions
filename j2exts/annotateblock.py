@@ -23,7 +23,7 @@ class AnnotateBlockExtension(Extension):
         
         body = caller()
         
-        if body is None or not body.strip():
+        if not header or body is None or not body.strip():
             return body
         
         lines = body.split(os.linesep)
