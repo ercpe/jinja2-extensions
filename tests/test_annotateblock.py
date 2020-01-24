@@ -25,3 +25,7 @@ class TestAnnotateBlockExtension(object):
     def test_add_annotation_with_spaces(self):
         output = self._render("""{% annotateblock 'Some text here' %}      some indented body{% endannotateblock %}""")
         assert output == "      Some text here\n      some indented body"
+
+    def test_annoate_with_vars(self):
+        output = self._render("""{% with prefix="# header line" %}{% annotateblock prefix %}some other text{% endannotateblock %}{%endwith%}""")
+        assert output == "# header line\nsome other text"
